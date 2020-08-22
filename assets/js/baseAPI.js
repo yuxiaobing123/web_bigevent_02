@@ -1,3 +1,5 @@
+
+var baseURL = 'http://ajax.frontend.itheima.net';
 $(function () {
 
     // 注意：在每次调用$.get()、$.post()和$.ajax()发起请求的时候
@@ -7,7 +9,7 @@ $(function () {
     $.ajaxPrefilter(function (options) {
         // 在发起真正的Ajax请求之前，统一拼接请求的路径
         // console.log(options.url);
-        options.url = 'http://ajax.frontend.itheima.net' + options.url;
+        options.url = baseURL + options.url;
 
 
         // 统一为有权限的接口设置请求头信息
